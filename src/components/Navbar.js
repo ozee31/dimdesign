@@ -7,8 +7,7 @@ const Navbar = class extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      active: false,
-      navBarActiveClass: '',
+      active: false
     }
   }
 
@@ -16,78 +15,61 @@ const Navbar = class extends React.Component {
     // toggle the active boolean in the state
     this.setState(
       {
-        active: !this.state.active,
-      },
-      // after state has been updated,
-      () => {
-        // set the class in state for the navbar accordingly
-        this.state.active
-          ? this.setState({
-              navBarActiveClass: 'is-active',
-            })
-          : this.setState({
-              navBarActiveClass: '',
-            })
+        active: !this.state.active
       }
     )
   }
 
   render() {
     return (
-      <nav
-        className="navbar is-transparent"
-        role="navigation"
-        aria-label="main-navigation"
-      >
-        <div className="container">
-          <div className="navbar-brand">
-            <Link to="/" className="navbar-item" title="Logo">
-              <img src={logo} alt="Kaldi" style={{ width: '88px' }} />
-            </Link>
-            {/* Hamburger menu */}
-            <div
-              className={`navbar-burger burger ${this.state.navBarActiveClass}`}
-              data-target="navMenu"
-              onClick={() => this.toggleHamburger()}
-            >
-              <span />
-              <span />
-              <span />
-            </div>
-          </div>
+      <header class="header">
+        <nav
+          className="navbar"
+          role="navigation"
+          aria-label="main-navigation"
+        >
           <div
-            id="navMenu"
-            className={`navbar-menu ${this.state.navBarActiveClass}`}
+            className={`navbar__burger ${this.state.active ? "navbar__burger--opened" : ""}`}
+            data-target="navMenu"
+            onClick={() => this.toggleHamburger()}
           >
-            <div className="navbar-start has-text-centered">
-              <Link className="navbar-item" to="/about">
-                About
+            <span />
+            <span />
+            <span />
+          </div>
+
+          <ul
+            id="navMenu"
+            className={`navbar__menu ${this.state.active ? "navbar__menu--opened" : ""}`}
+          >
+            <li class="navbar__menuItem">
+              <Link className="navbar__menuItemLink" to="/a-propos">
+                A propos
               </Link>
-              <Link className="navbar-item" to="/blog">
+            </li>
+            <li class="navbar__menuItem">
+              <Link className="navbar__menuItemLink" to="/services">
+                Services
+              </Link>
+            </li>
+            <li class="navbar__menuItem">
+              <Link className="navbar__menuItemLink" to="/portfolio">
+                Portfolio
+              </Link>
+            </li>
+            <li class="navbar__menuItem">
+              <Link className="navbar__menuItemLink" to="/blog">
                 Blog
               </Link>
-              <Link className="navbar-item" to="/contact">
+            </li>
+            <li class="navbar__menuItem">
+              <Link className="navbar__menuItemLink" to="/contact">
                 Contact
               </Link>
-              <Link className="navbar-item" to="/contact/examples">
-                Form Examples
-              </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
-              <a
-                className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <span className="icon">
-                  <img src={github} alt="Github" />
-                </span>
-              </a>
-            </div>
-          </div>
-        </div>
-      </nav>
+            </li>
+          </ul>
+        </nav>
+      </header>
     )
   }
 }

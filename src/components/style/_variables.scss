@@ -1,0 +1,26 @@
+/*
+ * colors 
+ */
+$blue: #212B55;
+$gold: #AB8D58;
+$white: #ffffff;
+
+$primary-color: $blue;
+$secondary-color: $gold;
+
+$text-color: $white;
+
+/*
+ * typography 
+ */
+$fontSize-xs: .8rem;
+$fontSize-s: .9rem;
+$fontSize-default: 1rem;
+$fontSize-l: 1.25rem;
+$fontSize-xl: 1.5rem;
+
+/*
+ * breakpoints 
+ */
+$breakpoint-tablet: 576px;
+$breakpoint-desktop: 992px;

@@ -1,0 +1,64 @@
+.navbar {
+    @media (min-width: $breakpoint-desktop) {
+        display: flex;
+    }
+
+    &__burger {
+        cursor: pointer;
+        margin: 2rem 1rem;
+        width: 50px;
+        text-align: center;
+
+        span {
+            background-color: $white;
+            border-radius: 1rem;
+            display: block;
+            margin: 0.1rem;
+            padding: 0.2rem;
+
+            &:nth-child(2) {
+                width: 75%;
+            }
+        }
+
+        &--opened {
+            &:after {
+                content: "X";
+                font-size: $fontSize-xl;
+                font-weight: bold;
+            }
+
+            span {
+                display: none;
+            }
+        }
+    }
+
+    &__menu {
+        display: none;
+        list-style: none;
+        padding: 0;
+
+        &--opened {
+            display: block;
+
+            @media (min-width: $breakpoint-desktop) {
+                display: flex;
+                justify-content: space-around;
+                width: 100%;
+            }
+        }
+    }
+
+    &__menuItem {
+        padding: 1rem 0;
+        text-align: center;
+    }
+
+    &__menuItemLink {
+        color: $text-color;
+        font-size: $fontSize-xl;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}
