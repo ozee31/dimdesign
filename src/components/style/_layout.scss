@@ -28,9 +28,11 @@ body {
 }
 
 .main {
+    margin: 0 1rem;
     padding-top: 6rem;
 
     @media (min-width: $breakpoint-desktop) {
+        width: 100%;
         padding-left: 5rem;
     }
 }

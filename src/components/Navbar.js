@@ -20,7 +20,7 @@ const Navbar = class extends React.Component {
 
   render() {
     return (
-      <header class="header">
+      <header className="header">
         <nav
           className="navbar"
           role="navigation"
@@ -40,27 +40,27 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar__menu ${this.state.active ? "navbar__menu--opened" : ""}`}
           >
-            <li class="navbar__menuItem">
+            <li className="navbar__menuItem">
               <Link className="navbar__menuItemLink" to="/a-propos">
                 A propos
               </Link>
             </li>
-            <li class="navbar__menuItem">
+            <li className="navbar__menuItem">
               <Link className="navbar__menuItemLink" to="/services">
                 Services
               </Link>
             </li>
-            <li class="navbar__menuItem">
+            <li className="navbar__menuItem">
               <Link className="navbar__menuItemLink" to="/portfolio">
                 Portfolio
               </Link>
             </li>
-            <li class="navbar__menuItem">
+            <li className="navbar__menuItem">
               <Link className="navbar__menuItemLink" to="/blog">
                 Blog
               </Link>
             </li>
-            <li class="navbar__menuItem">
+            <li className="navbar__menuItem">
               <Link className="navbar__menuItemLink" to="/contact">
                 Contact
               </Link>

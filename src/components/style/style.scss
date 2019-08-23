@@ -1,5 +1,8 @@
 @import "./variables";
 @import "./layout";
 
-@import "./components/navbar.scss";
-@import "./components/aside.scss";
+@import "./templates/index";
+
+@import "./components/navbar";
+@import "./components/aside";
+@import "./components/footer";

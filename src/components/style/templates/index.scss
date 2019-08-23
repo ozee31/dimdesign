@@ -1,0 +1,16 @@
+.page-index {
+    text-align: center;
+
+    @media (min-width: $breakpoint-desktop) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__text {
+        @media (min-width: $breakpoint-desktop) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
