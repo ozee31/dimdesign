@@ -13,3 +13,24 @@ body {
     padding: 0;
     font-size: $fontSize-default;
 }
+
+.header {
+    background-color: $primary-color;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+    
+.mainContainer {
+    @media (min-width: $breakpoint-desktop) {
+        display: flex;
+    }
+}
+
+.main {
+    padding-top: 6rem;
+
+    @media (min-width: $breakpoint-desktop) {
+        padding-left: 5rem;
+    }
+}
