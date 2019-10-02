@@ -1,16 +1,20 @@
 .page-index {
-    text-align: center;
+  text-align: center;
 
+  @media (min-width: $breakpoint-desktop) {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__text {
     @media (min-width: $breakpoint-desktop) {
-        display: flex;
-        justify-content: space-around;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
+  }
 
-    &__text {
-        @media (min-width: $breakpoint-desktop) {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-    }
+  &__logo {
+    max-width: 80%;
+  }
 }
