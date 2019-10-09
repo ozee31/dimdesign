@@ -1,0 +1,45 @@
+.page-services {
+  padding: 0 2rem;
+
+  &__header {
+    margin-bottom: 2rem;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    @media (min-width: $breakpoint-desktop) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: block;
+    border: solid 2px $gold;
+    margin-bottom: 1rem;
+    min-height: 300px;
+    padding: 0.5rem;
+    color: inherit;
+    text-decoration: none;
+
+    @media (min-width: $breakpoint-desktop) {
+      width: calc(33.33% - 0.67rem);
+      margin-right: 1rem;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+
+    &:hover {
+      border-color: $selected-color;
+    }
+  }
+
+  &__itemTitle {
+    text-align: center;
+  }
+}
